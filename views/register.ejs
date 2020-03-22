@@ -1,0 +1,55 @@
+<% include ../partials/nav.ejs %><!-- header -->
+
+    <div class="bg"> <!-- wrapper -->
+        <div class="container"> 
+            <div id="pageTitle">Register</div> <!-- title -->
+            
+            <article class="element"> <!-- main body -->
+                <div class="element" title="hey ho"> <!-- image -->
+                    <img id="formImage" src="/register.jpg" alt="registration_image" >
+                </div>
+                        
+                <form accept-charset="UTF-8" class="validate" action="/register"   method="post">
+                    
+                    <p>Username:</p> 
+                    <input type="text" name="username"  placeholder="Your Name..." title="Username must be alphanumeric and 5 to 20 characters long." required pattern="[a-zA-Z0-9_-]{5,20}"/>
+                    <p>Email:</p>
+                    <input type="email" name="email" placeholder="Your Email.." required >
+                    <p>Password:</p>
+                    <input type="password" name="password" placeholder="Your Password.." required title="Any Uppercase/Lowercase letters & numbers, between 6-10 characters - no special characters"pattern="[A-Za-z\d]{6,10}">
+                    <button class="formbutton" >Register</button><br><br><br><br>
+
+                    <div  class="content">
+                        <span>Already have an account?<a href="/login" class="button">Login</a></span>
+                    </div>
+
+                </form>
+
+                <!-- <div class="contentWrap">
+                    <div  class="content">
+                        <span>Already have an account?</span>
+                    </div>
+                    <div  class="content">
+                        <a href="/login" class="button">Login</a>
+                    </div>
+                    <div  class="content">
+                            <span>Or go</span>
+                    </div>
+                    <div  class="content"> 
+                        <a class="button" href="/">Home</a>
+                    </div>
+                </div>  -->
+
+            </article> <!-- end main body -->
+        </div> <!-- end container -->
+    </div> <!-- end wrapper -->
+
+<script src="../nav.js"></script>
+<script src="../jquery.js"></script>      
+</body>
+</html>   
+
+     
+
+
+

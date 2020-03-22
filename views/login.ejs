@@ -1,0 +1,32 @@
+<% include ../partials/nav.ejs %> <!-- header -->
+    <div class="vlform"></div><!-- vertical line -->
+    
+    <div class="bg"> <!-- wrapper -->
+        <div class="container">
+            <div id="pageTitle">Login</div> <!-- title -->
+
+            <% if (message.length > 0) { %><!-- authentication messages -->
+                <div class="alert alert-danger"><%= message %></div>
+            <% } %>
+            <div class="element"> <!-- image -->
+                <img id="formImage" src="/Marietta_Varga_Know_the_Unknown_03.jpg" alt="Know_the_Unknown#03_by_Marietta_Varga">
+            </div>
+            <form class="validate" action="/login" method="post">   
+                <p>Username:</p>
+                <input type="text"  name="username" placeholder="Enter Username.." title="Username must be alphanumeric and 5 to 20 characters long." required pattern="[a-zA-Z0-9_-]{5,20}">
+                <p>Password:</p>
+                <input type="password"  name="password" placeholder="Your Password.." required title="Any Uppercase/Lowercase letters & numbers, between 6-10 characters - no special characters"pattern="[A-Za-z\d]{6,10}">
+                <button type="submit" >Login</button><br><br><br><br>
+                <div  class="content">
+                <span>Need an account?<a href="/register" class="button">Register</a></span>
+                </div>
+            </form>
+
+       
+        </div> <!-- end container -->
+    </div> <!-- end wrapper -->
+
+<script src="../nav.js"></script>
+<script src="../jquery.js"></script>      
+</body>
+</html>   

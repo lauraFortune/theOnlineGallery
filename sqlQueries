@@ -1,0 +1,93 @@
+//===============================================================================================//                                                                                                                                                                                            //
+//                                                             SQL  QUERIES                                                                                                              //                                                                                                                                                                                         //
+//===============================================================================================//
+// //CREATE USERS TABLE
+// app.get('/createusers', function(req, res){
+//     let sql = 'CREATE TABLE users (Id int NOT NULL AUTO_INCREMENT PRIMARY KEY, username varchar(255), email varchar(255), password varchar(255));'
+//     let query = db.query(sql, (err,res) => {
+//      if(err) throw err;
+//     });
+        
+//     res.send("Created Users Table!");
+//     });
+//     //visit  'http://localhost:3000/createusers' to create the users table - Only do once!
+
+// //ALTER USERS TABLE - add profile image column
+// app.get('/alter', function(req, res){   
+//     let sql = 'ALTER TABLE users ADD COLUMN image varchar(50);'
+//      let query = db.query(sql, (err, res) => {
+//       if(err) throw err;
+//      console.log(res); 
+//      });
+//      res.send("altered");
+//      });
+
+// //ALTER USERS TABLE - add admin bool column
+// app.get('/alter', function(req, res){
+//     let sql = 'ALTER TABLE users ADD COLUMN admin BOOLEAN DEFAULT FALSE;'
+//      let query = db.query(sql, (err, res) => {
+//       if(err) throw err;
+//      console.log(res); 
+//      });
+//      res.send("altered");
+//      });
+
+// //ALTER USERS TABLE - add nationality column
+// app.get('/alter', function(req, res){
+//     let sql = 'ALTER TABLE users ADD nationality varchar(50);'
+//      let query = db.query(sql, (err, res) => {
+//       if(err) throw err;
+//      console.log(res); 
+//      });
+//      res.send("altered");
+//      });
+
+// //ALTER USERS TABLE - number column
+// app.get('/alter', function(req, res){
+//     let sql = 'ALTER TABLE users DROP column number;'
+//      let query = db.query(sql, (err, res) => {
+//       if(err) throw err;
+//      console.log(res); 
+//      });
+//      res.send("altered");
+//      });
+
+// //ALTER USERS TABLE - add phonenumber
+// app.get('/alter', function(req, res){
+//     let sql = 'ALTER TABLE users ADD COLUMN phonenumber varchar(50);'
+//      let query = db.query(sql, (err, res) => {
+//       if(err) throw err;
+//      console.log(res); 
+//      });
+//      res.send("altered");
+//      });
+
+//UPDATE USERS TABLE - update username by ID
+// app.get('/update', function(req, res){
+//     let sql = "UPDATE users SET username = 'lauraFortune' WHERE Id = 1";
+//      let query = db.query(sql, (err, res) => {
+//       if(err) throw err;
+//      console.log(res); 
+//      });
+//      res.send("updated");
+//      });
+
+// //CREATE ADMIN
+// app.get('/makeAdmin', function(req, res){
+//     let sql = "UPDATE users SET admin = true WHERE username = 'lauraFortune'";
+//      let query = db.query(sql, (err, res) => {
+//       if(err) throw err;
+//      console.log(res); 
+//      });
+//      res.send("Made an admin!");
+//      });
+
+//DROP TABLE - USERS
+app.get('/dropUsers', function(req, res){
+    let sql = 'DROP TABLE users;'
+     let query = db.query(sql, (err, res) => {
+      if(err) throw err;
+     console.log(res); 
+     });
+     res.send("users dropped");
+     });

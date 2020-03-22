@@ -1,0 +1,110 @@
+<% include ../partials/nav.ejs %> <!-- header -->
+   
+<!--############### REBUILD ME - CONTROL PANEL ############################################################-->
+<div id="controlPanel">
+        <div class="container">
+            <div id="rebuildMe" class="card">
+                <img class="card-img"  src="/Heather_Day.jpg" alt="">
+                <p class="controlText">Artist: Artist's Name</p>
+                <p class="controlText">Image: URL format</p>
+                <p class="controlText">Email: example@domain.com</p>
+                <p class="controlText">Contact: example 555-555-555</p>
+                <p class="controlText">Nationality: Place of Birth</p>
+                <p class="controlText">Biography: Simple account of life and/or relevant work</p>
+            </div>
+        </div>
+    </div>
+    <!--############### REBUILD ME - CONTROL PANEL  #################################################################-->
+ 
+    <div class="bgtest"><!-- page-left wrapper -->
+        <div class="vl"></div>  <!--vertical line -->
+        <div class="vl3"></div> <!-- vertical line -->
+        
+        <div id ="gallery" class="container"> <!-- page container -->
+
+            <div class="titles" > 
+                <div class="element"> <!-- titles -->
+                    <a href="/artists"  id="pageTitle" style="color:white; padding-bottom: 20%">Artists </a>
+                </div>
+                <div class="element catlinks"> <!-- search bar -->
+                    <form accept-charset="UTF-8" action="/searchArtists" method="post" >
+                        <input class="search" type="text" name="searchArtists" placeholder="Find an Artist">
+                    </form>
+                </div>  
+             </div> 
+             
+            <div class= "card-container" id="cardGallery"> <!-- dynamic gallery -->       
+                <% filteredArtists.forEach(function(el) { %>
+                    <div class="card">
+                        <img src="/<%=el.image %>" class="card-img" id="item<%= el.id %>"/>
+                        <p >Name: <%= el.name %></p>
+                        
+                        <script>
+                            $(document).ready(function(){
+                                $("#item<%= el.id %>").click(function(){ //rebuild the control panel onclick
+                                    
+                                    var rebuildMe = document.getElementById('rebuildMe');
+                                    
+                                    rebuildMe.innerHTML = "";
+
+                                    var image = document.createElement("img");
+                                    var name = document.createElement("p");
+                                    var email = document.createElement("p");
+                                    var tel = document.createElement("p");
+                                    var nationality = document.createElement("p");
+                                    var bio = document.createElement("p");
+                                    var id = document.createElement("p");
+                                    var linkEdit = document.createElement("a");
+                                    
+                                    
+                                    linkEdit.setAttribute("href", "/editArtist/<%= el.id %>");
+                                    linkEdit.setAttribute("class","button");
+                                    linkEdit.innerHTML = "Edit";
+
+                                    image.setAttribute("src", "/<%= el.image %>");
+                                        
+                                    name.setAttribute("class","caption2");
+                                    name.innerText = "<%= el.name %>";
+
+                                    tel.setAttribute("class","controlText");
+                                    tel.innerText = "Contact: <%= el.tel%>";
+
+                                    nationality.setAttribute("class","controlText");
+                                    nationality.innerText = "Nationality: <%= el.nationality %>";
+                                        
+                                    email.setAttribute("class","controlText");
+                                    email.innerText = "Email: <%= el.email %>";
+                                        
+                                    bio.setAttribute("class","controlText");
+                                    bio.innerText = "Biography: <%= el.bio %>";
+                                        
+                                    id.setAttribute("class","controlText");
+                                    id.innerHTML = "ID: " + "<%= el.id %>";
+
+                                    rebuildMe.appendChild(name);
+                                    rebuildMe.appendChild(image);
+                                    rebuildMe.appendChild(email);
+                                    rebuildMe.appendChild(tel);
+                                    rebuildMe.appendChild(nationality);
+                                    rebuildMe.appendChild(bio);
+                                    rebuildMe.appendChild(linkEdit);
+
+                                    $("#rebuildMe").fadeOut(0);  
+                                    $("#rebuildMe").fadeIn( 3000, function(){}); 
+                                });
+                                
+                            });
+                        </script>
+                    </div> 
+                <% }); %>
+            </div><!-- end dynamic gallery-->
+        </div> <!-- end page container -->
+    </div> <!-- end page-left wrapper -->
+
+<script src="../nav.js"></script>
+<script src="../jquery.js"></script>      
+</body>
+</html>   
+
+
+

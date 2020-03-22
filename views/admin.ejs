@@ -1,0 +1,50 @@
+<% include ../partials/nav.ejs %> <!--############### HEADER PARTIAL ###########################-->
+   
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <div  class="container">
+            <div class="card"><!-- left image -->
+                <img id="modalIm" class="modal-content" >
+            </div>
+            
+            <div class="modalCard"><!-- right text -->
+                <p id="titleText" class="caption"></p>
+            </div>
+        </div>
+    </div> <!-- end modal -->
+    
+
+    <div class="bg white"><!-- wrapper --> 
+     
+        <div  class="container"> <!-- admin title -->
+            <div class="titles"> 
+                <div class="element">
+                    <a href="/userGallery" id="pageTitle" style="color: rgb(180, 179, 179); z-index: 2">Admin</a>
+                </div>
+            </div>
+        </div><!-- end admin title -->
+
+        <div class="container">
+            <div class="element">
+
+                <div class="card"> <!-- image -->
+                    <img id="profileImage" src="/<%= user.image %>" alt="" style="margin-right: 5%; border: 2px solid rgb(224, 224, 224);">
+                </div>
+
+                <div id="adminCard" class="card" >
+                    <a href="/gallery" ><span id="one"><span class="adminNum">01</span><span class="adminLink">Artwork</span></span></a><br>
+                    <a href="/artists"><span id="two"><span class="adminNum">02</span><span class="adminLink">Artists</span></span></a><br>
+                    <a href="/addArtwork" ><span id="three"><span class="adminNum">03</span><span class="adminLink">Add Artwork</span></span></a><br>
+                    <a href="/addArtist" ><span id="four"><span class="adminNum">04</span><span class="adminLink">Add Artists</span></span></a>
+                    <a href="/profiles"><span id="four"><span class="adminNum">05</span><span class="adminLink">Member Profiles</span></span></a><br><br><br><br>
+                </div>
+
+            </div> <!-- end element -->
+        </div> <!-- end container -->
+
+    </div> <!--  end wrapper -->
+    
+    <script src="../nav.js"></script>
+    <script src="../jquery.js"></script>      
+    </body>
+    </html>   

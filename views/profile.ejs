@@ -1,0 +1,55 @@
+<% include ../partials/nav.ejs %> <!--############### HEADER PARTIAL ###########################-->
+
+    <div class="bgtest"><!-- wrapper -->
+        <div  class="container"> <!-- container -->
+
+            <div class="userArtists"> <!-- session details-->
+                <div  class="userCatsEl"> 
+                    <a href="/profile" ><%= user.username %> is logged in : )</a>
+                </div>
+                <div  class="userCatsEl">
+                    <span><a href="/logout" class="button">Logout</a></span>
+                </div>
+            </div> <!-- end session details-->
+            
+            <div class="vl"></div>  <!-- vertical line -->
+
+            <div  class="container"> <!-- start titles -->
+                <div class="titles">
+                    <div class="element">
+                        <span id="pageTitle" style="color: white; z-index: 2">Profile</span>
+                    </div>
+                </div>
+            </div> <!-- end titles -->
+
+            <div class="element"> <!-- start image & card -->
+                <div class="card"> <!--  profile image -->        
+                    <img id="profileImage" src="<%= user.image %>" alt="">
+                </div>
+                <div class="card" id="profileCard"> <!-- profile card --> 
+                    <div class="element" style="margin-top: 0; margin-right: 0">
+                        <span>Username:<%= user.username %></span>
+                        <span>Email:<%= user.email %></span>
+                        
+                        <span>Phonenumber:<%= user.phonenumber %></span>
+                        <span>About:<%= user.about %></span>
+                        
+                        <span></span>
+                        <span><a href="/editProfile/<%= user.Id %>" class="button">Update</a></span>
+                    </div>
+                </div>
+            </div> <!-- end  image & card -->
+            
+        </div> <!-- end container -->
+    </div> <!-- end wrapper -->  
+                
+    <script src="../nav.js"></script>
+    <script src="../jquery.js"></script>      
+    </body>
+    </html>   
+
+
+         
+
+
+ 

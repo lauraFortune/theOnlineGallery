@@ -1,0 +1,103 @@
+<% include ../partials/nav.ejs %> <!-- header --> 
+
+<!--############### REBUILD ME - CONTROL PANEL ############################################################-->
+<div id="controlPanel">
+    <div class="container">
+        <div id="rebuildMe" class="card">
+            <img class="card-img"  src="/placeholderMember.jpeg" alt="">
+            <p class="controlText">Name: Username</p>
+            <p class="controlText">Email: example@domain.com</p>
+            <p class="controlText">Contact: example 555-555-555</p>
+            <p class="controlText">About: Few lines about the User</p>
+        </div>
+    </div>
+</div>
+<!--############### REBUILD ME - CONTROL PANEL  #################################################################-->   
+
+    <div class="bgtest"><!-- page-left wrapper -->
+        <div class="vl"></div>  <!--  vertical line -->
+        <div class="vl3"></div> <!--  vertical line  -->
+        
+        <div id ="gallery" class="container"> <!-- page container -->
+
+            <div class="titles" >
+                <div class="element"> <!-- titles -->
+                    <a href="/profiles"  id="pageTitle" style="color:white;">Profiles</a>
+                </div>
+                <div class="element catlinks"> <!-- search bar -->
+                    <form accept-charset="UTF-8" action="/searchUsers" method="post" >
+                        <input class="search" type="text" name="searchUsers" placeholder="Search User Profiles">
+                    </form>
+                </div>  
+             </div>
+             
+             <div class= "card-container" id="cardGallery"> <!-- dynamic gallery -->     
+                <% result.forEach(function(el) { %>
+                    <div class="card">
+                        <img src="<%=el.image %>" class="card-img" id="item<%= el.Id %>"/>
+                        <p >Username: <%= el.username %></p>
+                        
+                        <script>
+                            $(document).ready(function(){
+                                $("#item<%= el.Id %>").click(function(){ //rebuild the control panel onclick
+                                    
+                                    var rebuildMe = document.getElementById('rebuildMe');
+                                        
+                                    rebuildMe.innerHTML = "";
+
+                                    var image = document.createElement("img");
+                                    var id = document.createElement("p");
+                                    var username = document.createElement("p");
+                                    var email = document.createElement("p");
+                                    var about= document.createElement("p");
+                                    var phone = document.createElement("p");
+                                    var linkEdit = document.createElement("a");
+                                    var linkDelete = document.createElement("a");
+                                    
+                                    linkEdit.setAttribute("href", "/editProfile/<%= el.Id %>");
+                                    linkEdit.setAttribute("class","button");
+                                    linkEdit.innerHTML = "Edit";
+
+                                    image.setAttribute("src", "<%= el.image %>");
+
+                                    id.setAttribute("class","controlText");
+                                    id.innerHTML = "Id: " + "<%= el.Id %>";
+                                        
+                                    username.setAttribute("class","caption2");
+                                    username.innerText = "<%= el.username %>";
+                                        
+                                    email.setAttribute("class","controlText");
+                                    email.innerText = "Email: <%= el.email %>";
+                                        
+                                    about.setAttribute("class","controlText");
+                                    about.innerText = "About: <%= el.about %>";
+
+                                    phone.setAttribute("class","controlText");
+                                    phone.innerText = "Phonenumber: <%= el.phonenumber %>";
+                                        
+                                    
+                                    rebuildMe.appendChild(username);
+                                    rebuildMe.appendChild(image);
+                                    rebuildMe.appendChild(email);
+                                    rebuildMe.appendChild(phone);
+                                    rebuildMe.appendChild(about);
+                                    rebuildMe.appendChild(id);
+                                    rebuildMe.appendChild(linkEdit);
+
+                                    $("#rebuildMe").fadeOut(0);  
+
+                                    $("#rebuildMe").fadeIn( 3000, function(){});  
+                                }); 
+                            });
+                          
+                        </script>
+                    </div> 
+                <% }); %>
+            </div><!-- end dynamic gallery-->
+        </div><!-- end page container -->
+    </div> <!-- end page-left wrapper -->     
+
+<script src="../nav.js"></script>
+<script src="../jquery.js"></script>      
+</body>
+</html>   

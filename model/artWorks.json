@@ -1,0 +1,192 @@
+[
+    {
+        "id": 1,
+        "image": "Heaping, 2019.png",
+        "artName": "Heaping 2019",
+        "artist": "Heather Day",
+        "category": "Mixed Media",
+        "medium": "Mixed Media",
+        "sizeCm": "200 x 200 cm",
+        "sizeIn": "200 x 200 in"
+    },
+    {
+        "id": 2,
+        "image": "Portrait_5.jpg",
+        "artName": "Portrait #5",
+        "artist": "Ivana Besevic",
+        "category": "Digital",
+        "medium": "Digital Painting/Illustration",
+        "sizeCm": "",
+        "sizeIn": ""
+    },
+    {
+        "id": 4,
+        "image": "Something Good, 2017.png",
+        "artName": "Something Good, 2017",
+        "artist": "Tracey Emin",
+        "category": "Screenprint",
+        "medium": "Screen Print",
+        "sizeCm": "300 x 500 cm",
+        "sizeIn": "200 x 200 in"
+    },
+    {
+        "id": 3,
+        "image": "I want you so much, 2015.png",
+        "artName": "I want you so much, 2015",
+        "artist": "Tracey Emin",
+        "category": "Mixed Media",
+        "medium": "Mixed Media",
+        "sizeCm": "200 x 200 in",
+        "sizeIn": "200 x 200 cm"
+    },
+    {
+        "id": 5,
+        "image": "Seven Thirty-Two, 2017.png",
+        "artName": "Seven Thirty-Two, 2017",
+        "artist": "Heather Day",
+        "category": "Mixed Media",
+        "medium": "Acrylic, spray paint, and soft pastel on canvas",
+        "sizeCm": "269.2 × 182.9 cm",
+        "sizeIn": "106 × 72 in"
+    },
+    {
+        "id": 6,
+        "image": "Marilyn Bombshell, 2019.png",
+        "artName": "Marilyn Bombshell, 2019",
+        "artist": "Russell Young",
+        "category": "Screenprint",
+        "medium": "Screen Print",
+        "sizeCm": "200 x 300 cm",
+        "sizeIn": "200 x 200 in"
+    },
+    {
+        "id": 7,
+        "image": "Israeli Teenager, Mirian Schnook, age 15, Tel Aviv, 1951.png",
+        "artName": "Tel Aviv, Mirian Schnook, 1951",
+        "artist": "Ruth Orkin",
+        "category": "Photography",
+        "medium": "Photograph",
+        "sizeCm": "27.9 × 35.6 cm",
+        "sizeIn": "11 × 14 in"
+    },
+    {
+        "id": 8,
+        "image": "It was all too Much, 2018.png",
+        "artName": "It was all too Much, 2018",
+        "artist": "Tracey Emin",
+        "category": "Mixed Media",
+        "medium": "Acrylic on canvas",
+        "sizeCm": "182.3 x 182.3 cm",
+        "sizeIn": "71 3/4 x 71 3/4 in"
+    },
+    {
+        "id": 9,
+        "image": "Marilyn Crying Violet + Black.png",
+        "artName": "Marilyn Crying Violet + Black",
+        "artist": "Russell Young",
+        "category": "Screenprint",
+        "medium": "Enamel and diamond dust on canvas",
+        "sizeCm": "95 × 75 cm",
+        "sizeIn": "37 2/5 × 29 1/2 in"
+    },
+    {
+        "id": 10,
+        "image": "Neighbor 2, 2019.png",
+        "artName": "Neighbor 2, 2019",
+        "artist": "Heather Day",
+        "category": "Mixed media",
+        "medium": "Mixed media on canvas",
+        "sizeCm": "106.7 × 213.4 cm",
+        "sizeIn": "42 × 84 in"
+    },
+    {
+        "id": 11,
+        "image": "Boy Jumping into the Hudson River, NYC.png",
+        "artName": "Boy Jumping into Hudson, NYC",
+        "artist": "Ruth Orkin",
+        "category": "Photography",
+        "medium": "Gelatin silver print",
+        "sizeCm": "35.6 × 27.9 cm",
+        "sizeIn": "14 × 11 in"
+    },
+    {
+        "id": 12,
+        "image": "American Girl in Italy, 1951.png",
+        "artName": "American Girl in Italy, 1951",
+        "artist": "Ruth Orkin",
+        "category": "Photography",
+        "medium": "Silver gelatin print",
+        "sizeCm": "40.6 × 50.8 cm",
+        "sizeIn": "616 × 20 in"
+    },
+    {
+        "id": 13,
+        "image": "You Loved Me Like a Distant Star, 2015.png",
+        "artName": "You Loved Me Like a Distant Star",
+        "artist": "Tracey Emin",
+        "category": "Screenprint",
+        "medium": "Poster on 250 gsm silk finish paper",
+        "sizeCm": "50 × 70 cm",
+        "sizeIn": "19 7/10 × 27 3/5 in"
+    },
+    {
+        "id": 14,
+        "image": "Marietta_Varga_Know_the_Unknown_03.jpg",
+        "artName": "Know the Unknown #03",
+        "artist": "Marietta Varga",
+        "category": "Photography",
+        "medium": "Print",
+        "sizeIn": "",
+        "sizeCm": ""
+    },
+    {
+        "id": 15,
+        "image": "Mick Jagger, 2011.png",
+        "artName": "Mick Jagger, 2011",
+        "artist": "Russell Young",
+        "category": "Screenprint",
+        "medium": "Screenprint",
+        "sizeIn": "34",
+        "sizeCm": "34"
+    },
+    {
+        "id": 16,
+        "image": "Varga_Marietta_My_Town_Sio_fok_II_06.jpg",
+        "artName": "My Town Sio fok II #06",
+        "artist": "Marietta Varga",
+        "category": "Photography",
+        "medium": "Print",
+        "sizeIn": "",
+        "sizeCm": ""
+    },
+    {
+        "id": 17,
+        "image": "Varga_Marietta_My_Town_Sio_fok_II_05.jpg",
+        "artName": "My Town Sio fok II #05",
+        "artist": "Marietta Varga",
+        "category": "Photography",
+        "medium": "Print",
+        "sizeIn": "",
+        "sizeCm": ""
+    },
+    {
+        "id": 18,
+        "image": "after_august_08.jpg",
+        "artName": "After August #08",
+        "artist": "Marietta Varga",
+        "category": "Photography",
+        "medium": "Print",
+        "sizeIn": "",
+        "sizeCm": ""
+    },
+    {
+        "id": 19,
+        "image": "Wonderland5, 2019.png",
+        "artName": "Wonderland #5, 2019",
+        "artist": "Russell Young",
+        "category": "Print",
+        "medium": "Screen Print",
+        "sizeCm": "200 x 300 cm",
+        "sizeIn": "200 x 200 in"
+    }
+]

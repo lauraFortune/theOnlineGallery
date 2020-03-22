@@ -1,0 +1,45 @@
+<% include ../partials/nav.ejs %> <!-- header-->
+       
+    <div class="vlform"></div><!-- vertical line -->
+
+    <div class="bg"><!-- wrapper -->
+        <div class="container"> 
+            <div id="pageTitle">Edit Artwork</div>
+
+                <% res.forEach(function(el) {%>
+                    <div class="element"> <!-- image -->
+                        <img id="formImage" src="/<%=el.image %>" alt="<%= el.name%>">
+                    </div>
+                    <form accept-charset="UTF-8"  class="validate" action="/editArtwork/<%= el.id %>" method="post">
+                        <input type="text" name="image" placeholder="Image URL ..." value="<%= el.image%>" title="Jpg's or Png's only" required pattern=".*\.(jpe?g|png)$" required>
+                        <input type="text"  name="artName" placeholder="Title ..." value="<%= el.artName %>" title="Letters, numbers, '#', and spaces(at least one letter or number)" required pattern="[A-Za-z0-9 #_]*[A-Za-z0-9][A-Za-z0-9 #,'-._]*$" required >
+                        <input type="text" name="artist" placeholder="Artist ..." value="<%= el.artist %>"  title="Letters, numbers and spaces(at least one letter or number)" required pattern="[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$" required>
+                        <input type="text" name="category" placeholder="Category ..." value="<%= el.category %>" style="text-transform: capitalize" required pattern="[A-Za-z][A-Za-z\s]*$" required>
+                        <input type="text" name="medium" placeholder="Medium ..." value="<%= el.medium %>">
+                        <input type="text" name="sizeIn" placeholder="Dimensions in cms..." value="<%= el.sizeIn %>">
+                        <input type="text" name="sizeCm" placeholder="Dimensions inches..." value="<%= el.sizeCm %>">
+                        <button class="formbutton" >Update</button>
+                    </form>
+                    <div class="contentWrap"> <!-- buttons -->
+                        <div  class="content">
+                            <a class="button" href="/deleteArtwork/<%= el.id %>">Delete</a>   
+                        </div>
+                        <div  class="content"> 
+                            <a class="button" href="/gallery">Back</a>
+                        </div>
+                    </div> <!-- end buttons -->
+                <% }); %>
+                 
+            </div><!-- end container -->
+        </div><!-- end wrapper -->
+             
+<script src="../nav.js"></script>
+<script src="../jquery.js"></script>      
+</body>
+</html
+
+
+
+
+   
+

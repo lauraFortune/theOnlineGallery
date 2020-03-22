@@ -1,0 +1,137 @@
+#sideBar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 5%;/*hides nav*/
+    margin-left: -5%;
+    height: 100vh;
+    z-index: 10;
+    background: white;
+    border-right: .5px solid lightgrey;
+    }
+.nav-icon {
+    margin: 1.5em;
+    width: 25px;
+    z-index:18;
+    position: fixed;
+    cursor: pointer;
+    }     
+.nav-icon:after, 
+ .nav-icon:before{
+    background-color: black;
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 1.5px;
+    margin: 7px 0;
+    transition: all .2s ease-in-out;
+    }
+#contentIms{
+    position: fixed;
+    width: 45%;/*hides nav*/
+    margin-left:10%;
+    height: 100vh;
+    z-index: 3;
+    background-image: url(../images/home.jpg);
+    display: none;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    }
+#contentList{
+    
+    flex-direction: column;
+    position: fixed;
+    width: 55%;/*hides nav*/
+    margin-left: -50%;
+    height: 100vh;
+    z-index: 4;
+    background: white;
+    border-right: 1px solid lightgrey; 
+    }
+#contentList a {
+    display: inline-block;
+    letter-spacing: .2em;
+    color: grey;
+    font-size: calc(1rem + 1vw);
+    font-weight: bolder;
+    width: 100%;
+    text-decoration: none;
+    transition: background 3s ease, padding-left 1s ease;
+    margin-left: 15%;
+    margin-top: 7%;
+    }
+#contentList span { /* create space between all numbers and links*/
+    margin-right: 5%;
+    font-size: calc(1.5rem + 1.5vw);
+    color: lightgrey;
+    }  
+    #controlPanel{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        width: 45%;/*hides nav*/
+        margin-left: 55%;
+        height: 100vh;
+        z-index: 2;
+        background: white;
+        border-left: 1px solid lightgrey;
+        overflow: auto;
+      
+    }
+    #controlPanel img{
+        width: 400px;
+        padding-bottom: 5%;
+    }
+    #controlPanel input{
+        width: 380px;
+        height: 40px;
+        font: 20px;
+    }
+    #controlPanel button{
+        width: 400px;
+}
+#controlPanel .container{
+    padding: 10%;
+}
+#adminIcon{
+     
+    opacity: .6;
+    display: flex;
+    text-align: center;
+    margin: 1.6em;
+    width: 25px;
+    z-index:18;
+    position: fixed;
+    cursor: pointer;
+    justify-content: flex-end;
+    top: 85vh;
+    }
+    #accountIcon{
+        color: rgb(138, 138, 138);
+        display: flex;
+        text-align: center;
+        margin: .9em;
+        width: 25px;
+        z-index:18;
+        position: fixed;
+        cursor: pointer;
+        justify-content: flex-end;
+        bottom: 28vh;
+        }
+        #homeIcon{
+            color: rgb(138, 138, 138);
+            display: flex;
+            text-align: center;
+            margin: .9em;
+            width: 25px;
+            z-index:18;
+            position: fixed;
+            cursor: pointer;
+            justify-content: flex-end;
+            
+            top: 75vh;
+            }
+
+  

@@ -1,0 +1,88 @@
+<% include ../partials/nav.ejs %> <!-- header -->
+   
+    <div id="myModal" class="modal"> <!-- artwork modal -->
+        <span class="close">&times;</span> <!-- close -->
+        <div  class="container">
+            <div class="card"> <!-- image left -->
+                <img id="modalIm" class="modal-content" >
+            </div>
+            <div class="modalCard"> <!-- text right -->
+                <div id="artistText" class="caption" ></div>
+                <p id="titleText" class="caption"></p>
+                <p id="mediumText" class="caption"></p>
+                <p id="sizeInText" class="caption"></p>
+                <p id="sizeCmText" class="caption"></p>
+            </div>
+        </div>
+    </div><!-- end artwork modal -->
+    
+    <div class="bg white"><!-- wrapper -->
+        <div class="vl"></div>  <!-- vertical line -->
+        <div class="vl2"></div> <!-- vertical line -->
+        <div class="vl3"></div> <!-- vertical line -->
+     
+        <div  class="container"> <!-- gallery container -->
+            <div class="userCats">
+                <div class="userCatsEl">
+                    <a href='/userGallery' %>">ALL</a>
+                </div>    
+                <% catsArray.forEach(function(el) { %> <!--## catsArray func comes from app.js - array of unique cats filtered from artworks json#####-->
+                    <div class="userCatsEl">
+                        <a href="/userGallery?category=<%= el.replace(/\s+/g, '') %>"><%= el %></a>
+                    </div>   
+                <% }); %>
+                    
+                <div style="margin: 0 14% 0 4%" class="userCatsEl"> 
+                    <form  class="search" accept-charset="UTF-8" class="search" action="/userSearch" method="post"  >
+                        <input class="search" type="text" name="userSearch" placeholder="Enter An Artist">
+                    </form>
+                </div>  
+            </div>
+
+            <div class="titles"> <!-- titles -->
+                <div class="container">
+                    <div class="element">
+                        <a href="/userGallery" id="pageTitle">Gallery </a>
+                    </div>
+                </div>
+            </div> <!-- end titles -->
+            
+            <div class= "card-container" id="userGallery"> <!-- dynamic gallery -->       
+                <% filtered.forEach(function(el) { %>
+                    <div class="card">
+                        <img src="<%=el.image %>" class="card-img" id="item<%= el.id %>"/>
+                        <p class="hoverTitle controlText"><%= el.artName %></p>
+                        
+                        <script>
+                            $(document).ready(function(){ //get modal
+                                var img = document.getElementById("item<%= el.id %>");
+                                var modal = document.getElementById("myModal");  
+                                     
+                                img.onclick = function(){ // on click image... 
+                                modal.style.display = "block"; // unhide modal
+                                modalIm.setAttribute("src", "<%= el.image %>"); // set image source to current element image source
+                                artistText.innerHTML ="<%= el.artist %>"; // set inner HTML to artist of current element
+                                titleText.innerHTML ="<i><%= el.artName %><i>"; // set inner HTML to name of current element
+                                mediumText.innerHTML ="<%= el.medium %>"; // set inner HTML to medium of current element 
+                                sizeInText.innerHTML ="<%= el.sizeIn %>"; // set inner HTML to size in inches of current element
+                                sizeCmText.innerHTML ="<%= el.sizeCm %>"; // set inner HTML to size in cms of current element                   
+                                }
+                                        
+                                var span = document.getElementsByClassName("close")[0];
+                                   
+                                span.onclick = function() {  //close modal onclick
+                                modal.style.display = "none"; // hide modal 
+                                }
+                            }); 
+                          
+                        </script>
+                    </div>
+                <% }); %>
+            </div><!-- end dynamic gallery -->      
+        </div> <!-- end gallery container -->
+    </div> <!-- end wrapper -->    
+
+<script src="../nav.js"></script>
+<script src="../jquery.js"></script>      
+</body>
+</html>   

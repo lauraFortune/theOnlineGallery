@@ -1,0 +1,40 @@
+<% include ../partials/nav.ejs %> <!-- header-->
+
+    <div class="vlform"></div> <!-- vertical line -->
+    
+    <div class="bg"> <!-- wrapper -->
+        <div class="container"> 
+            <div id="pageTitle">Edit Artist</div>
+
+                <% res.forEach(function(el) {%>
+                    <div class="element"> <!-- image -->
+                        <img id="formImage" src="/<%= el.image%>" alt="<%= el.name%>">
+                    </div>
+                    <form accept-charset="UTF-8" class="validate"  action="/editArtist/<%= el.id %>" method="post" >
+                        <input type="text" name="image" placeholder="ImageUrl ..." value="<%= el.image%>" title="Jpg's or Png's only" required pattern=".*\.(jpe?g|png)$" required>
+                        <input type="text" name="name" placeholder="Name ..." value="<%= el.name %>"  title="Letters and spaces only" required pattern="[A-Za-z][A-Za-z\s]*$" required>
+                        <input type="text" name="tel" placeholder="Contact Number ..." value="<%= el.tel %>" title="Must contain numbers, '-', '()' '+' Optional" required pattern="(?=.*[0-9])[- +()0-9]+$">
+                        <input type="email" name="email" placeholder="Email ..." value="<%= el.email %>">
+                        <input type="text" name="nationality" placeholder="Nationality ..." value="<%= el.nationality %>" title="Letters, numbers and spaces(at least one letter or number)" required pattern="[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 #,'-._]*$">
+                        <input type="text" name="bio" placeholder="Biography ...." value="<%= el.bio %>">
+                        <button class="formbutton" >Update</button>
+                    </form>
+                    <div class="contentWrap"> <!-- buttons -->
+                        <div  class="content"> 
+                            <a class="button" href="/deleteArtist/<%= el.id %>">Delete</a>
+                        </div>
+                        <div  class="content"> 
+                            <a class="button" href="/artists">Back</a>
+                        </div>
+                    </div> <!-- end buttons -->
+                <% }); %>
+            
+        </div><!-- end container -->
+    </div><!-- end wrapper -->
+         
+<script src="../nav.js"></script>
+<script src="../jquery.js"></script>      
+</body>
+</html>   
+
+     

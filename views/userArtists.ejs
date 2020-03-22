@@ -1,0 +1,68 @@
+<% include ../partials/nav.ejs %> <!-- header -->
+   
+    <div id="myModal" class="modal"> <!-- artist modal -->
+        <span class="close">&times;</span> <!-- close -->
+        <div  class="container">
+            <div id="artistGal" class="card"><!-- image left -->
+                <img id="modalIm" class="modal-content" >
+            </div>
+            <div id="artistGal" class="modalCard"><!-- text right -->
+                <div id="titleText" class="caption"></div>
+                <p id="nationalityText" class="caption"></p>
+                <p id="bioText" class="caption"></p>
+            </div>
+        </div>
+    </div> <!-- end artist modal -->
+    
+    <div class="bg white"><!-- wrapper -->
+        <div class="vl"></div>  <!-- vertical line -->
+        <div class="vl2"></div>  <!-- vertical line -->
+        <div class="vl3"></div> <!-- vertical line -->
+     
+        <div  class="container"> <!-- gallery container -->
+
+            <div class="titles"> <!-- titles -->
+                <div class="container">
+                    <div class="element">
+                        <a href="/userArtists" id="pageTitle">Artists</a>
+                    </div>
+                </div>
+            </div>  <!-- end titles -->
+            
+            <div class= "card-container" id="userGallery"> <!-- dynamic gallery -->       
+                <% filteredArtists.forEach(function(el) { %>
+                    <div class="card">
+                        <img src="<%=el.image %>" class="card-img" id="item<%= el.id %>"/>
+                        <p class="hoverTitle">Artist: <%= el.name %></p>
+                        
+                        <script>
+                            $(document).ready(function(){ //get modal
+                                var img = document.getElementById("item<%= el.id %>");
+                                var modal = document.getElementById("myModal");  
+                                     
+                                img.onclick = function(){ // on click image... 
+                                modal.style.display = "block"; // unhide modal
+                                modalIm.setAttribute("src", "<%= el.image %>"); // set image source to current element image source
+                                titleText.innerHTML ="<%= el.name %>"; // set inner HTML to title of current element
+                                nationalityText.innerHTML ="<%= el.nationality %>"; // set inner HTML to title of current element
+                                bioText.innerHTML ="<%= el.bio %>"; // set inner HTML to title of current element
+                                }
+                                        
+                                var span = document.getElementsByClassName("close")[0]; 
+                                   
+                                span.onclick = function() {  //close modal onclick
+                                modal.style.display = "none"; // hide modal 
+                                }
+                            }); 
+                          
+                        </script>
+                    </div>
+                <% }); %>
+            </div> <!-- end dynamic gallery -->       
+        </div> <!-- end gallery container -->
+    </div> <!-- end wrapper -->    
+    
+<script src="../nav.js"></script>
+<script src="../jquery.js"></script>      
+</body>
+</html>   

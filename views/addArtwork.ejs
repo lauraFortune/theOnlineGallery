@@ -1,0 +1,38 @@
+<% include ../partials/nav.ejs %> <!-- header -->
+
+    <div class="vlform"></div>
+    <div class="bg">
+
+        <div class="container"> 
+            <div id="pageTitle">Add Artwork</div>
+            
+                <div class="element"> <!-- image -->
+                    <img id="formImage" src="/addArtwork.png" alt="artwork">
+                </div>
+                    
+                <form accept-charset="UTF-8" class="validate" action="/addArtwork" method="post"  id="uploadForm" ref="uploadForm">
+                    <input type="text" name="image" placeholder="Image URL ..."  title="Jpg's or Png's only" >
+                    <input type="text" name="artName" placeholder="Title ..." title="Letters, numbers, '#', and spaces(at least one letter or number)" required pattern="[A-Za-z0-9 #_]*[A-Za-z0-9][A-Za-z0-9 #!',-()_]*$" required>
+                    <input type="text" name="artist" placeholder="Artist ..."  title="Letters, numbers and spaces(at least one letter or number)" required pattern="[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$" required>
+                    <input type="text" name="category" placeholder="Category ..." style="text-transform: capitalize" required pattern="[A-Za-z][A-Za-z\s]*$" required><!--##force capital letter for display##-->
+                    <input type="text" name="medium" placeholder="Medium ...">
+                    <input type="text" name="sizeIn" placeholder="Dimensions in cms...">
+                    <input type="text" name="sizeCm" placeholder="Dimensions inches...">
+                    <button class="formbutton">Submit</button>
+                </form>
+
+                <div class="contentWrap"> <!-- back button -->
+                    <div  class="content"> 
+                        <a class="button" href="/gallery">Back</a>
+                    </div>
+                </div>
+    
+        </div><!-- end container -->
+    </div><!-- end wrapper -->
+
+<script src="../nav.js"></script>
+<script src="../jquery.js"></script>      
+</body>
+</html>   
+
+     

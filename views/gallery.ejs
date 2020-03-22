@@ -1,0 +1,117 @@
+<% include ../partials/nav.ejs %> <!-- header -->
+
+<!--############### REBUILD ME - CONTROL PANEL ############################################################-->
+<div id="controlPanel">
+        <div class="container">
+            <div id="rebuildMe" class="card">
+                <img class="card-img"  src="/artworkPlaceholder.png" alt="">
+                <p class="controlText">Title: Artwork's Title</p>
+                <p class="controlText">Image: URL format</p>
+                <p class="controlText">Artist: Artist's Name</p>
+                <p class="controlText">Category: Creates a searchable tag</p>
+                <p class="controlText">Medium: Medium used to create artwork</p>
+                <p class="controlText">Dimensions: Height and width in Inches/Centimetres</p>
+            </div>
+        </div>
+    </div>
+    <!--############### REBUILD ME - CONTROL PANEL  #################################################################-->    
+ 
+    <div class="bgtest"> <!-- page-left wrapper -->
+        <div class="vl"></div> <!--vertical line -->
+        <div class="vl3"></div> <!-- vertical line -->
+     
+        <div id ="gallery" class="container"> <!-- page container -->
+
+            <div class="titles" >
+                <div class="container">
+                    <div class="element"> <!-- titles -->
+                        <a href="/gallery" id="pageTitle" style="color:white; ">Gallery </a>
+                    </div>  
+                    <% catsArray.forEach(function(el) { %> <!--categories - catsArray func (array containing only unique artwork categories) -->
+                        <div class="element catlinks">
+                            <a href="/gallery?category=<%= el.replace(/\s+/g, '') %>"><%= el %></a>
+                        </div>   
+                    <% }); %>
+                    <div class="element catlinks"> <!-- search bar -->
+                        <form class="search" accept-charset="UTF-8" class="search" action="/search" method="post" >
+                            <input class="search" type="text" name="search" placeholder="Filter by Artist">
+                        </form>
+                    </div>   
+                </div>
+            </div>
+            
+            <div class= "card-container" id="cardGallery"> <!-- dynamic gallery -->       
+                <% filtered.forEach(function(el) { %>
+                    <div class="card">
+                        <img src="<%=el.image %>" class="card-img" id="item<%= el.id %>"/>
+                        <p ><%= el.artName %></p>
+                        <p >Artist: <%= el.artist %></p>
+                        <p >Category: <%= el.category %></p>
+                        
+                        
+                        <script>
+                            $(document).ready(function(){
+                                $("#item<%= el.id %>").click(function(){ //rebuild the control panel onclick
+                                
+                                    var rebuildMe = document.getElementById('rebuildMe');
+                                    
+                                    rebuildMe.innerHTML = "";
+
+                                    var image = document.createElement("img");
+                                    var artName = document.createElement("p");
+                                    var artist = document.createElement("p");
+                                    var category = document.createElement("p");
+                                    var medium = document.createElement("p");
+                                    var sizeIn = document.createElement("p");
+                                    var sizeCm = document.createElement("p");
+                                    var linkEdit = document.createElement("a");
+                                    
+                                    linkEdit.setAttribute("href", "/editArtwork/<%= el.id %>");
+                                    linkEdit.setAttribute("class","button");
+                                    linkEdit.innerHTML = "Edit";
+
+                                    image.setAttribute("src", "<%= el.image %>");
+                                    
+                                    artName.setAttribute("class","caption2");
+                                    artName.innerText = "<%= el.artName %>";
+                                    
+                                    artist.setAttribute("class","controlText");
+                                    artist.innerText = "Artist: <%= el.artist %>";
+                                    
+                                    category.setAttribute("class","controlText");
+                                    category.innerText = "Category: <%= el.category %>";
+
+                                    medium.setAttribute("class","controlText");
+                                    medium.innerHTML = "Medium: <%= el.medium %>";
+
+                                    sizeIn.setAttribute("class","controlText");
+                                    sizeIn.innerHTML = "Sixe in Inches: <%= el.sizeIn %>";
+
+                                    sizeCm.setAttribute("class","controlText");
+                                    sizeCm.innerHTML = "W x H Cms: <%= el.sizeCm %>";
+
+                                    rebuildMe.appendChild(artName);
+                                    rebuildMe.appendChild(image);
+                                    rebuildMe.appendChild(artist);
+                                    rebuildMe.appendChild(category);
+                                    rebuildMe.appendChild(medium);
+                                    rebuildMe.appendChild(sizeIn);
+                                    rebuildMe.appendChild(sizeCm);
+                                    rebuildMe.appendChild(linkEdit);
+
+                                    $("#rebuildMe").fadeOut(0);  
+                                    $("#rebuildMe").fadeIn( 3000, function(){});       
+                                });      
+                            });   
+
+                        </script>
+                    </div>
+                <% }); %>
+            </div><!-- end dynamic gallery -->      
+        </div> <!-- end page container -->
+    </div> <!-- end page-left wrapper -->    
+    
+<script src="../nav.js"></script>
+<script src="../jquery.js"></script>      
+</body>
+</html>   

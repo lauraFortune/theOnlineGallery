@@ -1,0 +1,512 @@
+/*font-family: 'Libre Caslon Display', serif;*/
+#text {
+    margin: 10% 10%;
+    text-align: center; /*horizontally align*/
+    align-self: center;/*vertically allign*/
+    font-size: calc(2rem + .6vw);
+    color: black;
+    position: absolute;
+  }
+.hideme {
+    padding-top: 5%;
+    opacity:0;
+  } 
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Old Standard TT', serif;
+    font-weight: lighter;
+    line-height: 1.5;
+    letter-spacing: 1.5;
+  }
+.white {
+    background: rgb(250, 250, 250);
+  }
+/*######### HORIZONTAL LINE #########*/
+.hl {
+    /*margin-top: 10%;*/
+    width: 300px;
+    border: 1px solid darkgray;
+    transition: width 4s ease, border 4s ease;
+  }
+  .hl:hover {
+    width: 50%;
+    border: 1px dotted #86CFDE;
+  }
+#title{
+    font-size: calc(4.4rem + 1vw);
+    margin: 12% 0 4% 5.5%;
+    width: 45%;
+    display: none;
+    position: absolute;
+    }
+#pageTitle{
+    font-size: calc(2.8rem + 4.2vw);
+    color: rgb(221, 221, 221);
+    margin-top: 8.2vh;
+    z-index: 2;
+}
+#title2{
+    font-size: calc(1.7rem + .6vw);
+    margin-left:  8%;
+    margin-bottom: 4%;
+    width: 40%;
+    }
+.margin{
+    width: 30%;
+    padding-top: 5%;
+    margin-left: 8%;
+    }
+ #textWhite {
+    text-align: left; /*horizontally align*/
+    /*align-self: center;vertically allign*/
+    font-size: calc(.8rem + .6vw);
+    color: lightgrey;
+    margin: 2% 2% 2% 1%;
+    }  
+.vl{/*vertical line*/
+    width: 1px;
+    height: 100%;
+    background-color: rgb(240, 239, 239);
+    margin-left: 28.75%;
+    position: fixed;
+    z-index: 0
+}
+.vl2{/*vertical line*/
+    width: 1px;
+    height: 100%;
+    margin-left: 34%; 
+    width: 1px;
+    min-height: 100%;
+    background-color: rgb(240, 239, 239);
+    margin-left: 52.5%;
+    position: fixed;
+    z-index: 0 
+}
+.vlform{/*vertical line*/
+    width: 1px;
+    height: 100%;
+    width: 1px;
+    min-height: 100%;
+    background-color: rgb(219, 218, 218);
+    margin-left: 54.9%;
+    position: fixed;
+    z-index: 0 
+}
+.vl3{/*vertical line*/
+    width: 1px;
+    min-height: 100%;
+    background-color: rgb(240, 239, 239);
+   margin-left: 76.85%;
+   position: fixed;
+   z-index: 0
+}
+
+#scroll{
+    padding-left: 200%;
+    font-size: calc(.8rem + .4vw);
+    }
+/*########### FORM ###########*/
+.validate{
+    margin-left: 55%;
+    }
+input{
+   
+    margin-left: 0;
+    padding-left: 20px;
+    margin-right: 20%;
+    margin-bottom: 15px;
+    width: calc(24rem + 1.4vw);
+    height: 40px;
+    border: transparent ! important; 
+    font-family: 'Old Standard TT', serif;
+    font-size: calc(.8rem + .4vw);
+    background-color: #fafafa;
+    color: rgb(172, 169, 169);  
+    }
+   
+button{
+    width: calc(25.4rem + 1.4vw);
+    height: 60px;
+    color: black;
+    background-color: rgb(236, 235, 235);
+    border: none;
+    font-family: 'Old Standard TT', serif;
+    font-size: 1.2rem;
+    } 
+    .formbutton{
+        margin-bottom: 2%;
+        width: calc(25rem + 1.5vw);
+        height: 60px;
+        color: black;
+        background-color: rgb(236, 235, 235);
+        border: none;
+        font-family: 'Old Standard TT', serif;
+        font-size: 1.2rem;
+      }
+/*########### END FORM ###########*/
+#formImage{
+    margin-top: 40%;
+    display: none;
+    position: absolute;
+    width: 33%;
+    height: 70%;
+    z-index: -3;
+    margin-left: 12%;
+}
+/*############# START BACKGROUND IMAGES ######################*/
+#gradient_wrap{
+    /* background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(4,12,12,0.6) 25%, rgba(4,12,12,0.8) 50%, rgba(4,12,12,0.9) 75%,rgba(4,12,12,0.94) 100%);*/
+    min-height: 100vh;
+    }
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row; 
+    /*margin: 0 0%;*/
+    }
+.element img {
+    height: 300px;
+    width: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 2em;
+    }
+.element { /*overall wrap*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 0%;
+    padding: 2%;
+    width: 100%;
+    /*width: 600px;*/
+    }
+.bg {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    }
+
+.bgtest {
+    background-repeat: no-repeat;
+    background-position: center;
+    background: linear-gradient(rgba(0,0,0,.1),    rgba(0,0,0,.1))/*transparent overlay*/ ;
+    background-attachment: fixed;/*creates paralax effect */
+    background-size: cover;
+    min-height: 110vh;
+    }
+
+#image1{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../landingPage.jpg);
+    background-attachment: fixed; /*creates paralax effect */
+    /*background-size: cover;*/
+    object-fit: cover;
+    margin-left: 40%;
+    min-height: 80vh;
+    display: none;
+    }
+/*############# END BACKGROUND IMAGES ######################*/
+/*image gallery shop page*/
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 15%;
+    z-index: 2;
+    }
+.card-container .card {
+    border: solid 1px #cec9c9;
+    margin: 3% 3% 10% 3%;
+    background: white;
+    text-align: center;
+    }
+.card-container .card .card-body {
+    padding: 10px;    
+    }
+.card-container .card img.card-img {
+    height: 600px;
+    width: 460px;
+    object-fit: cover;
+    }
+    #gallery img{
+        width: 250px;
+        height: 250px;   
+    }
+    #gallery{
+        width:60%;
+    }
+    .filter{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 0 0 5%;
+        width: 100%;
+    }
+   .titles{
+    margin: 0 35% 5% 35%;
+   }
+   .controlText{
+    padding-left: 20px;
+    font-size: calc(.8rem + .4vw);
+    color: rgb(117, 114, 114); 
+    width: 380px;
+    /*padding:3%;*/
+   }
+   .button{  
+       float: right;
+       width: 70px;
+       padding: .2%;
+       margin-right: 5%;
+       font-size: calc(.6rem + .4vw);
+       color: rgb(255, 255, 255); 
+       background-color: rgb(62, 62, 63);
+       text-align: center;
+       text-decoration: none;    
+   }
+
+   a.button{
+       float: none;
+       padding: .5rem;
+       margin: 6%; 
+   }
+  .search{
+    font-size: calc(.7rem + .2vw);
+    outline: none !important;
+    height: 20px;
+    background: rgb(241, 241, 241);
+    width: 170px;
+  }
+  .catlinks{
+    padding-left: 8%;
+  }
+  .userCats { /*overall wrap*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 5% 0 10%;
+    width: 100%;
+    margin-top: 1.5%;
+    }
+    .userCatsEl{
+        margin: 0 0 0 4%
+    }
+    .userArtists{
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin: 0 5% 0 10%;
+        width: 100%;
+        margin-top: 1.5%;
+    }
+  
+   #userGallery{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 10% 0 15%;
+        }
+    #userGallery img:hover{
+        opacity: .5;
+        cursor:pointer;
+         transition: .7s;  
+    }
+a{
+    text-decoration: none !important;
+    color: rgb(37, 37, 37);
+}
+
+#profileCard{
+    display: flex;
+    width: 450px;
+    height: auto;
+    padding: 5rem 0 5rem 5rem;
+    font-size:1.3rem;
+    color: grey;
+    margin-left: 90%;
+    position: absolute;
+    opacity: .6;
+    background: white;
+    border: 1px solid rgb(44, 43, 43);
+    flex-wrap: wrap;
+    }
+    #profileCard span {
+        padding-right: 5rem;
+        padding-bottom: 5%;
+
+    }
+
+    #profileImage{
+        display: flex;
+        width: 400px;
+        height: 500px;
+        margin-left: 80%; 
+        border: 2px solid white;
+        flex-wrap: wrap;
+    }
+   
+/*############# START MODAL GALLERY - ADAPTED FROM A W3 SCHOOLS TUTORIAL###########################################################*/
+/*============= REF: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_modal_image  =================================*/
+#myModal div.container {
+    margin-top: 5%;
+} 
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    padding: 50px  0 50px 0; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(87, 87, 87); /* Fallback color */
+    background-color: rgba(17, 17, 17, 0.9); /* Black w/ opacity */
+}
+
+.modal-content {/* left - image */
+    margin: auto;
+    display: block;
+    width: 900px;
+  }
+  .caption { /*right - text*/
+    margin: auto;
+    display: block;
+    text-align: left;
+    color: rgb(41, 38, 38);
+    font-size: 2.4rem;
+    padding: 22% 0 10% 15%;
+    text-decoration: underline;
+  }
+  p.caption{
+      font-size: 1.5rem;
+      text-decoration: none;
+      padding: 3% 15% 1% 15%;
+      color: rgb(124, 117, 117);
+  }
+  .modalCard{
+    background: rgb(250, 247, 247);
+    width: 20%; 
+  }
+  p#bioText.caption {
+    text-align: justify;  
+  }
+  div#titleText.caption {
+      padding: 10% 0 2% 15%;
+  }
+      div#artistGal.modalCard{
+        width: 900px;
+      }
+
+  .modal-content, .caption, .modalCard { /* adds animation - image zooms on open*/
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }   /* end animation*/
+
+  .close {  /* The Close Button */
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #7c7a7a;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 700px){   /* 100% Image Width on Smaller Screens */
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+/*############# END MODAL GALLERY################*/
+/*############# START ADMIN ################*/
+#adminCard{ 
+    width: 350px;
+    height: 220px;
+    padding: 5%;
+    font-size:1.3rem;
+    color: grey;
+    margin-left: 80%;
+    position: absolute;
+    opacity: .6;
+    background: white;
+    border: 1px solid rgb(44, 43, 43);
+
+    }
+.adminNum{
+    font-size: calc(1.6rem + .6vw); 
+    color: grey; 
+    margin-right: 10%;
+}
+.adminLink{
+    font-size: calc(1.4rem + .4vw);
+}
+/*############# END ADMIN ################*/
+    .content{
+        margin: 0 0 0 2%
+    }
+    .contentWrap{
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        margin: 0 15% 0 10%;
+        width: 100%;
+        margin-top: 1.5%;
+    }
+    .caption2 { /*right - text*/     
+        display: block;
+        text-align: left;
+        color: rgb(124, 117, 117);
+        font-size: 2rem;
+        
+      }
+    a button input input:focus{
+        text-emphasis: none !important;
+        outline: none !important;
+        text-decoration: none !important;
+    }
+
+/*https://girliemac.com/blog/2012/11/21/html5-form-validation/  */
+    /* When the pattern is matched */
+input[type=text]:valid {
+    color: rgb(143, 140, 140);
+}
+/* Unmatched */
+input[type=text]:invalid {
+    color: rgb(248, 196, 176);
+}
+input[type=email]:valid [type=password]:invalid{
+    color: rgb(143, 140, 140);
+}
+input[type=email]:invalid [type=password]:invalid{
+    color: rgb(248, 196, 176);
+}
+input[type=password]:invalid{
+    color: rgb(143, 140, 140);
+}
+input[type=password]:invalid{
+    color: rgb(248, 196, 176);
+}

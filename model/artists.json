@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "image": "Heather_Day.jpg",
+        "name": "Heather Day",
+        "tel": "555-555-555",
+        "email": "example@domain.com",
+        "nationality": "American, b. 1989",
+        "bio": "California-based artist Heather Day makes abstract paintings comprised of scraped, smeared, and flooded pools of pigment. The compulsive energy of her work oscillates between rehearsed abandon and careful restraint. Her encompassing murals, large canvases, and intimate drawings study the mechanisms of sensory perception — mining what happens when the body interprets a sound as a texture, or a scent as a color. Heather Day lives and works in California. She received a BFA from The Maryland Institute College of Art (MICA). The artist’s work has been shown in New York, Los Angeles, Miami, San Francisco, and Seoul, including exhibits at The Urban Institute of Contemporary Art in Grand Rapids, MI, and The Massachusetts Museum of Contemporary Art (MASS MOCA). She has an upcoming residency at the Vermont Studio Center, followed by a solo exhibition at Fort Wayne Museum of Art in 2020."
+    },
+    {
+        "id": 2,
+        "image": "Tracey_Emin.jpg",
+        "name": "Tracey Emin",
+        "tel": "444-444-444",
+        "email": "example@domain.com",
+        "nationality": "British, b. 1963",
+        "bio": "A prominent member of the Young British Artists (YBAs), Emin works in a wide range of mediums, including film, painting, neon, embroidery, drawing, installation, and sculpture. Her work is intensely personal, revealing intimate details of her life with brutal honesty and poetic humor. She has spoken of “the narcissism behind what I do—the self, self, self—and how difficult it is for me to really share things, even though I think I am sharing all the time.” This paradoxical approach—at once audacious and confessional, narcissistic and self-deprecatory—earned Emin a nomination for the Turner Prize in 1999. Though she did not win, Emin received significant acclaim for her installation titled My Bed, which featured the artist’s unmade bed surrounded by personal items (from slippers to empty liquor bottles, cigarette butts, and condoms), exploring the allegorical qualities of a bed as a place of birth, sex, and death."
+    },
+    {
+        "id": 3,
+        "image": "Ruth_Orkin.jpg",
+        "name": "Ruth Orkin",
+        "tel": "555-555-555",
+        "email": "examle@domain.com",
+        "nationality": "American, b. 1921 - 1985",
+        "bio": "Ruth Orkin was an American photojournalist and filmmaker perhaps best known for her photograph, American Girl in Italy, taken in 1951. The subject of the now-iconic photograph was the 23-year-old Ninalee Craig (known at that time as Jinx Allen). The photograph was conceived inadvertently when Orkin noticed the men ogling Allen as she walked down the street. Orkin asked Allen to walk down the street again, to be sure she had the shot."
+    },
+    {
+        "id": 4,
+        "image": "Russell_Young.jpg",
+        "name": "Russel Young",
+        "tel": "555-555-555",
+        "email": "examle@domain.com",
+        "nationality": "British, b. 1959",
+        "bio": "Russell Young is interested in the places where the glamour of the American dream meets the darkness of crime, addiction, and death. He explores this in series such as “Dirty Pretty Things” (2010), in which screen printed images of notoriously tragic stars Marilyn Monroe and Kurt Cobain are sprinkled with diamond flakes. Young began as a straightforward photographer of celebrities, getting his start shooting the cover for George Michael's Faith album. Gradually, he shifted his approach to become an artist whose work comments on the phenomenon of celebrity portraiture. Young emulates Andy Warhol's printing style, applying saturated color over screen printed images in which subjects appear blown up and grainy, as though printed on newsprint."
+    },
+    {
+        "id": 5,
+        "image": "Varga_Marietta.jpg",
+        "name": "Marietta Varga ",
+        "tel": "555-555-555",
+        "email": "domain@example.com",
+        "nationality": "Hungarian, b. 1992",
+        "bio": "Marietta Varga was born in Hungary. She completed her studies, BA in Photography at Moholy-Nagy University of Art and Design between 2013-2016. Currently living and working in Budapest. Her visual world is described as simple and clean, balanced with precisely directed compositions. Her sensitivity in the use of colours and spatial awareness help to create the unique atmosphere of her visual world. Her pictures often have strong symbolism where the viewers can find themselves in a strange surreal dream."
+        
+    },
+    {
+        "id": 6,
+        "image": "Ivana_Besevic.png",
+        "name": "Ivana Besevic",
+        "tel": "555-555-555",
+        "email": "domain@example.com",
+        "nationality": "Serbian",
+        "bio": "Fine Artist and illustrator specializing in portraiture and figurative art in digital and traditional media.​ From a small town in Serbia,  went to school for design and afterwards college in Belgrade, then studied and lived in Paris for a few years, and now spending time working remotely."
+        
+    }
+]
