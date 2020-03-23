@@ -54,7 +54,7 @@ Full CRUD Rich Internet Web application - designed to manage the inventory, clie
 
 ### GearHost
 
-You don't have a mongoDB account....
+You don't have a GearHost account....
    1. Navigate to GearHost and sign up for a free account - https://www.gearhost.com/
    2. Select 'Add CloudSite' and choose 'Create Cloudsite' (choose the free option)
 
