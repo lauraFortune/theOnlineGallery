@@ -1,6 +1,6 @@
 # The Online Gallery 
 
-Full CRUD Rich Internet Web application - designed to manage the inventory, clients and online presense for a small Art Gallery.
+Full CRUD Rich Internet Web application - designed to manage the inventory, clients and online presence for a small Art Gallery.
 <br>
 
 ## Built With
@@ -76,7 +76,7 @@ You have a GearHost Account...
 1. Clone project 
 
    ```bash
-   git clone https://github.com/lauraFortune/gitTest.git
+   git clone https://github.com/lauraFortune/theOnlineGallery.git
    ```
 2. Create a .env file based on the .env.example.
 
