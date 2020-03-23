@@ -78,7 +78,7 @@ You have a GearHost Account...
    ```bash
    git clone https://github.com/lauraFortune/theOnlineGallery.git
    ```
-2. Create a .env file based on the .env.example.
+2. Create a .env file based on the .env.example inside 'theOnlineGallery' folder
 
 3. Create a Users table for authentication.
    - Open app.js file 
