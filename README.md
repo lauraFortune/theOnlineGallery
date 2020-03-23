@@ -90,7 +90,7 @@ You have a GearHost Account...
    node app.js
    ```
    -  Navigate to http://localhost:3000/createusers to create your users table
-   - Uncomment '/createusers' request
+   - Recomment '/createusers' request
    
 4. Create system Admin for authorisation and application privelages:
    - Open app.js file 
@@ -105,7 +105,7 @@ You have a GearHost Account...
       node app.js
       ```
    -  Navigate to http://localhost:3000/makeAdmin to update the User table
-   - Uncomment '/makeAdmin' request
+   - Recomment '/makeAdmin' request
    
 3. Run app
 
