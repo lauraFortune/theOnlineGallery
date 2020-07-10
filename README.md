@@ -72,7 +72,7 @@ You have a GearHost Account...
       - Select 'Databases' and choose 'Create Database'
       - Choose the MySQL free option and select 'Create Empty Database. You will be prompted to enter a Database Name (name of your choice)
       
-   2. Database credentials will be needed when creating your .env file before running the application. Copy and and save the following:
+   2. Database credentials will be needed when creating your .env file before running the application. Click on the new database that you have created and copy and save the           following details:
       - Database Name
       - Database server address
       - Username
@@ -86,7 +86,16 @@ You have a GearHost Account...
    ```bash
    git clone https://github.com/lauraFortune/theOnlineGallery.git
    ```
-2. Create a .env file based on the .env.example inside 'theOnlineGallery' folder
+2. Create a new file inside the root directory and name it '.env'. Populate your '.env' file based on the provided '.env.example' file inside 'theOnlineGallery' folder.<br>
+   Example '.env' file:
+
+   ```bash
+   PORT = 3000
+   HOST = den1.mysql9.gear.host
+   USER = myNewDatabase
+   DB_PASSWORD =  Yh~qTS9mR~d_
+   DB = myNewDatabase
+   ```
 
 3. Create a Users table for authentication.
    - Open app.js file 
