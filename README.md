@@ -2,7 +2,7 @@
 [theonlinegallery.herokuapp.com](https://theonlinegallery.herokuapp.com/)<br><br>
 
 Full CRUD Rich Internet Web application - designed to manage the inventory, clients and online presence for a small Art Gallery.
-<br><br>
+<br>
 #### UX/UI
 JQuery ‘hover’, ‘fade’, ‘animate’ and ‘scroll’ are used extensively throughout the site to enhance the user experience.  The navigation menu consists of a narrow sidebar which is always visible, displaying some quick click links to the user. Further links are revealed when appropriate through a slide-out nav bar, so as not to overwhelm the user. 
 
@@ -87,7 +87,6 @@ You have a GearHost Account...
    git clone https://github.com/lauraFortune/theOnlineGallery.git
    ```
 2. Create a new file inside the root directory and name it '.env'. Populate your '.env' file based on the provided '.env.example' file inside 'theOnlineGallery' folder.
-   Example '.env' file:
 
    ```bash
    PORT = 3000
@@ -97,7 +96,7 @@ You have a GearHost Account...
    DB = myNewDatabase
    ```
 
-3. Create a Users table for authentication.
+3. Create a Users table for authentication:
    - Open app.js file 
    - Navigate to heading - 'DATABASE SETUP -SQL  QUERIES' 
    - Uncomment  '/createusers' request
@@ -109,7 +108,16 @@ You have a GearHost Account...
    -  Navigate to http://localhost:3000/createusers to create your users table
    - Recomment '/createusers' request
    
-4. Create system Admin for authorisation and application privelages:
+4. Create an account:
+   - Restart app
+      ```bash
+      node app.js
+      ```
+   - Navigate to http://localhost:3000
+   - Click on the profile icon(The head and shoulders icon)
+   - Create a new account. Remember your 'User' credentials for the next step.
+   
+5. Create system Admin for authorisation and application privelages. Certain views and CRUD functionality are restricted to the Admin user only. The 'isAdmin' function checks if    Admin bool value is true before loading restricted views.  
    - Open app.js file 
    - Navigate to heading - 'DATABASE SETUP -SQL  QUERIES' 
    - Uncomment  '/makeAdmin' request
@@ -124,13 +132,13 @@ You have a GearHost Account...
    -  Navigate to http://localhost:3000/makeAdmin to update the User table
    - Recomment '/makeAdmin' request
    
-3. Run app
+6. Run app
 
    ```bash
    node app.js
    ```
    
-4. Open http://localhost:3000 to view the application in your browser.<br>
+7. Open http://localhost:3000 to view the application in your browser.<br>
 
 ## Acknowledgments
 - Tomomi Imura - [Custom form validation](https://girliemac.com/blog/2012/11/21/html5-form-validation/)
