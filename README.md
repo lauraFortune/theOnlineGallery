@@ -133,7 +133,7 @@ You have a GearHost Account...
    - Recomment '/makeAdmin' request
    
 6. Run app
-
+ 
    ```bash
    node app.js
    ```
