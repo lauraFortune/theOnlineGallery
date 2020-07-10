@@ -7,7 +7,7 @@ Full CRUD Rich Internet Web application - designed to manage the inventory, clie
 JQuery ‘hover’, ‘fade’, ‘animate’ and ‘scroll’ are used extensively throughout the site to enhance the user experience.  The navigation menu consists of a narrow sidebar which is always visible, displaying some quick click links to the user. Further links are revealed when appropriate through a slide-out nav bar, so as not to overwhelm the user. 
 
 #### Data Structures
-The Online Gallery consists of three main data structures - ‘Artists’, ‘Artworks’ and ‘Profiles’. JSON files were used to store the main data structures, while MySQL was used for authentication of the User model(‘Profiles’). ‘GearHost’ to host my MySQL database.
+The Online Gallery consists of three main data structures - ‘Artists’, ‘Artworks’ and ‘Profiles’. JSON files were used to store the main data structures, while MySQL was used for authentication of the User model(‘Profiles’). ‘GearHost’ was used to host the MySQL database.
 
 
 
