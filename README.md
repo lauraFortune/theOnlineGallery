@@ -86,7 +86,7 @@ You have a GearHost Account...
    ```bash
    git clone https://github.com/lauraFortune/theOnlineGallery.git
    ```
-2. Create a new file inside the root directory and name it '.env'. Populate your '.env' file based on the provided '.env.example' file inside 'theOnlineGallery' folder.<br>
+2. Create a new file inside the root directory and name it '.env'. Populate your '.env' file based on the provided '.env.example' file inside 'theOnlineGallery' folder.
    Example '.env' file:
 
    ```bash
